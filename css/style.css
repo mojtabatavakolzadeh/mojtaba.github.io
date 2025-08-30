@@ -700,15 +700,68 @@ a:hover {
   background-color: #0078ff;
 }
 
+
+/*======================================
+//--//-->   OWLCAROUSEL
+======================================*/
+.skills-carousel .item {
+  display: flex;
+  align-items: center;   /* vertically center image */
+  justify-content: center; /* horizontally center image */
+  height: 150px;         /* same height for all items */
+}
+
+.skill-img {
+  width: 120px;          /* fixed width */
+  height: 120px;         /* fixed height */
+  object-fit: contain;   /* keep proportions without stretching */
+  margin: 0 auto;        /* center horizontally */
+  display: block;        /* center in item div */
+}
+
+
 /*======================================
 //--//-->   SERVICES
 ======================================*/
 
+/* .service-box {
+  background-color: #fff;
+  padding: 2.5rem 1.3rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+} */
+/* Keep Bootstrap row behavior intact */
+.service-ico {
+  text-align: center;   /* center contents */
+  margin-bottom: 1rem;
+}
+.service-icon-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.services-mf .row {
+  flex-wrap: wrap; /* no need to redefine display */
+}
+
+/* Let columns stretch equally */
+.services-mf .col-md-4 {
+  display: flex;
+  align-items: stretch;
+}
+
+/* Each card fills column height */
 .service-box {
   background-color: #fff;
   padding: 2.5rem 1.3rem;
   border-radius: 1rem;
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;   /* ensure full width inside column */
 }
 
 .service-box:hover .ico-circle {
@@ -767,6 +820,37 @@ a:hover {
 /*======================================
 //--//-->   PORTFOLIO
 ======================================*/
+.work-text {
+  padding: 15px;
+  background-color: #f8f9fa;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.work-box:hover {
+  cursor: pointer;
+}
+
+.work-description {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.btn-more {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.work-img .btn {
+  background-color: rgba(0, 120, 255, 0.9);
+  padding: 6px 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  color: #fff;
+}
+
 
 .work-box {
   margin-bottom: 3rem;
@@ -865,6 +949,11 @@ a:hover {
 /*======================================
 //--//-->   BLOG
 ======================================*/
+.card-img img {
+  width: 100%;
+  height: 250px; /* same for all */
+  object-fit: cover;
+}
 
 .card-blog .card-body {
   position: relative;
